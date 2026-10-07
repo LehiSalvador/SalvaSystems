@@ -94,6 +94,10 @@ def check_svg(text, source, root):
     return errors
 
 
+def reject_json_constant(value):
+    raise ValueError(f'Nonstandard JSON constant: {value}')
+
+
 def check_repository(root):
     root = Path(root).resolve()
     if not root.is_dir():
@@ -131,8 +135,8 @@ def check_repository(root):
                 errors.extend(check_svg(text, source, root))
             else:
                 try:
-                    json.loads(text)
-                except json.JSONDecodeError as error:
+                    json.loads(text, parse_constant=reject_json_constant)
+                except ValueError as error:
                     errors.append(f'{source.relative_to(root)}: Invalid JSON: {error}')
     return sorted(set(errors))
 

@@ -75,6 +75,12 @@ class DocumentationChecks(unittest.TestCase):
         self.write('README.md','# Inicio\n')
         self.assertEqual(check_repository(self.root), [])
 
+    def test_nonstandard_json_constants_are_rejected(self):
+        for constant in ['NaN', 'Infinity', '-Infinity']:
+            with self.subTest(constant=constant):
+                self.write('example.json', '{"value":' + constant + '}')
+                self.assertTrue(any('Invalid JSON' in error for error in check_repository(self.root)))
+
 
 if __name__ == '__main__':
     unittest.main()

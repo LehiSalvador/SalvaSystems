@@ -1,0 +1,21 @@
+name: Corrección de documentación
+description: Reportar un problema verificable en la presentación pública de Salva Systems.
+title: "docs: "
+body:
+  - type: markdown
+    attributes:
+      value: "No incluyas información privada, secretos ni registros de clientes."
+  - type: input
+    id: location
+    attributes:
+      label: Archivo o enlace
+      description: Dónde está el contenido que debe revisarse.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema y corrección propuesta
+      description: Describe qué está mal, cómo corregirlo y qué evidencia pública lo respalda.
+    validations:
+      required: true

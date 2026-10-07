@@ -1,0 +1,21 @@
+name: Propuesta de documentación
+description: Proponer contenido público útil para Salva Systems.
+title: "docs: "
+body:
+  - type: markdown
+    attributes:
+      value: "Esta propuesta no implica un compromiso de desarrollo del producto. Usa ejemplos ficticios."
+  - type: textarea
+    id: need
+    attributes:
+      label: Necesidad y audiencia
+      description: Qué falta y a quién ayuda.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Alcance y criterio de aceptación
+      description: Qué incluir, qué excluir y cómo verificar el resultado.
+    validations:
+      required: true

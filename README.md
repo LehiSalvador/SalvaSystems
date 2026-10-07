@@ -35,3 +35,7 @@ Salva Systems es la empresa madre del ecosistema. Aplomo System, ATENOR System y
 
 - [Portafolio de Lehi Salvador](https://github.com/LehiSalvador)
 - [Salva Systems](https://salvasystems.site)
+
+## Herramientas públicas
+
+[Checker de documentación offline](tools/README.md): Python sin dependencias externas; comprueba enlaces locales, SVG y JSON. Licencia MIT limitada al checker y sus pruebas.

@@ -39,3 +39,7 @@ Salva Systems es la empresa madre del ecosistema. Aplomo System, ATENOR System y
 ## Herramientas públicas
 
 [Checker de documentación offline](tools/README.md): Python sin dependencias externas; comprueba enlaces locales, SVG y JSON. Licencia MIT limitada al checker y sus pruebas.
+
+## Documentación de producto
+
+[Contexto y alcance](docs/overview.md) · [Hoja de ruta pública](docs/roadmap.md)
